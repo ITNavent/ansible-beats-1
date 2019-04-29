@@ -18,3 +18,9 @@
 ############################# Logging #########################################
 
 {{ beat_logging_conf | to_nice_yaml }}
+
+
+{% if setup_conf is defined %}
+############################# Setup #########################################
+{{ setup_conf | to_nice_yaml }}
+{% endif %}
